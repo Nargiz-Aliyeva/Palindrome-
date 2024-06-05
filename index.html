@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const words = ["level", "test", "radar", "madam", "mom", "text", "river"];
+      let count = 0;
+      for (let word of words) {
+        let isPal = true;
+        let HalfOfThe = Math.floor(word.length / 2);
+        for (let j = 0; j < HalfOfThe; j++) {
+          // const element = array [j];
+          if (word[j] !== word[word.length - 1 - j]) {
+            isPal = false;
+            break;
+          }
+        }
+        if (isPal) {
+          count++;
+        }
+        // console.log(word);
+      }
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>
